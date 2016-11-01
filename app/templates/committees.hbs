@@ -1,0 +1,5 @@
+{{#each model as |committee|}}
+  <div>
+    <h4>{{committee.name}} <button class="btn btn-sm btn-info" {{action 'findSubcommittees' committee}}>View subcommittees</button></h4>
+  </div>
+{{/each}}

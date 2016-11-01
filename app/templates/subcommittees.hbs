@@ -1,0 +1,7 @@
+{{#if model}}
+  {{#each model as |subcommittee|}}
+    <h4>{{subcommittee.name}}</h4>
+  {{/each}}
+{{else}}
+  <h2>There are currently no subcommitees assigned to this committee!</h2>
+{{/if}}
