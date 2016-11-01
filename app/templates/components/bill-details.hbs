@@ -1,0 +1,15 @@
+{{#if bill.short_title}}
+  <li><h4>{{bill.short_title}}</h4><button class="btn btn-primary"{{action 'billClicked'}}>show details</button></li>
+{{else}}
+  <li><h4>{{bill.official_title}}</h4><button class="btn btn-primary"{{action 'billClicked'}}>show details</button></li>
+{{/if}}
+{{#if showDetails}}
+  <div class="Details" >
+    <p>Official Name: {{bill.official_title}}</p>
+    <p>Introduced on: {{bill.introduced_on}}</p>
+    <p>Official page of bill: <a href={{bill.last_version.urls.html}}> see it!</a></p>
+    <p>Sponsor of this bill:{{bill.sponsor.first_name}} {{bill.sponsor.last_name}}</p>
+    <p>Type of bill: {{bill.bill_type}}</p>
+    <p>Committee id: {{bill.committee_ids}}</p>
+  </div>
+{{/if}}
